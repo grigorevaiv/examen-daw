@@ -14,7 +14,9 @@ mv -f /tmp/moodle-4.5.1/* /var/www/html/
 
 rm -f /tmp/v4.5.1.zip
 rm -rf /tmp/moodle-4.5.1
-
+mkdir -p $DATAROOT
+chmod 775 $DATAROOT
+chown -R www-data:www-data $DATAROOT
 # Устанавливаем Moodle через CLI
 sudo -u www-data /usr/bin/php /var/www/html/admin/cli/install.php \
     --lang=$LANG \
