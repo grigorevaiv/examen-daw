@@ -23,12 +23,14 @@ sudo -u www-data /usr/bin/php /var/www/html/admin/cli/install.php \
     --wwwroot=$WWWROOT \
     --dataroot=$DATAROOT \
     --dbtype=$DBTYPE \
+    --dbhost=$DBHOST \
     --dbname=$DBNAME \
     --dbuser=$DBUSER \
     --dbpass=$DBPASS \
-    --fullname=$FNAME \
+    --fullname="$FNAME" \
     --shortname=$SNAME \
     --adminuser=$ADMIN \
     --adminpass=$ADMINPASS \
     --adminemail=$ADMINMAIL \
-    --non-interactive
+    --non-interactive \
+    --agree-license
